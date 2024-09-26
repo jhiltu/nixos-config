@@ -8,9 +8,9 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./nvidia.nix
-    ./steam.nix
-    ./virtualization.nix
+    ./system/nvidia.nix
+    ./system/steam.nix
+    ./system/virtualization.nix
   ];
 
   # Bootloader.
