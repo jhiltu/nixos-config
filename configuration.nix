@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nvidia.nix
     ];
 
   # Bootloader.
@@ -42,17 +43,6 @@
   environment.shells = with pkgs; [ bash zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
-  # Nvidia
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-
-    open = true;
-    nvidiaSettings = true;
-  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -113,7 +103,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     vim 
      neovim
      wget
      git
