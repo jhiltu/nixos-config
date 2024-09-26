@@ -1,6 +1,6 @@
 {
 
-  description = "My first flake";
+  description = "NixOS Config";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -17,16 +17,16 @@
  	nixosConfigurations = {
       	  enne = lib.nixosSystem {
             inherit system;
-	    modules = [ ./configuration.nix ];
+	    modules = [ 
+	      ./configuration.nix 
+	      home-manager.nixosModules.home-manager
+	      {
+                 home-manager.useGlobalPkgs = true;
+		 home-manager.useUserPackages = true;
+		 home-manager.users.sose = import ./home.nix;
+	      }
+	    ];
 	  };
         };
-
-	homeConfigurations = {
-	  sose = home-manager.lib.homeManagerConfiguration {
-	    inherit pkgs;
-	    modules = [ ./home.nix ];
-	  };
-	};
    };
-
 }

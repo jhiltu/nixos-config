@@ -14,4 +14,6 @@ in
     enable = true;
     shellAliases = myAliases;
   };
+
+  programs.starship.enable = true;
 }
