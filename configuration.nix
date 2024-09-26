@@ -5,7 +5,8 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
     ./steam.nix
@@ -40,7 +41,10 @@
   };
 
   # zsh
-  environment.shells = with pkgs; [ bash zsh ];
+  environment.shells = with pkgs; [
+    bash
+    zsh
+  ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
@@ -87,7 +91,10 @@
   users.users.sose = {
     isNormalUser = true;
     description = "Joni Hiltunen";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     # packages = with pkgs; [];
   };
 
@@ -127,5 +134,8 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }

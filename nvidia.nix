@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Nvidia
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -13,4 +14,3 @@
     nvidiaSettings = true;
   };
 }
-

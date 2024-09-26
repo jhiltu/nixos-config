@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  imports = [ ./sh.nix ./editors.nix ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./sh.nix
+    ./editors.nix
+  ];
 
   home.stateVersion = "24.05"; # Don't touch!
 
@@ -21,7 +25,12 @@
     git
     gh
 
-    (nerdfonts.override { fonts = [ "Noto" "JetBrainsMono" ]; })
+    (nerdfonts.override {
+      fonts = [
+        "Noto"
+        "JetBrainsMono"
+      ];
+    })
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -39,7 +48,9 @@
     # '';
   };
 
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
