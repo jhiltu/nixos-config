@@ -1,10 +1,6 @@
-{ config, pkgs, ... }:
-let 
-  myAliases = {
-    ll = "ls -l";
-  };
-in
-{
+{ ... }:
+let myAliases = { ll = "ls -l"; };
+in {
   programs.bash = {
     enable = true;
     shellAliases = myAliases;

@@ -5,12 +5,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./nvidia.nix
-      ./steam.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./nvidia.nix
+    ./steam.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -89,10 +88,7 @@
     isNormalUser = true;
     description = "Joni Hiltunen";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
+    # packages = with pkgs; [];
   };
 
   # Install firefox.
@@ -105,13 +101,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     vim 
-     neovim
-     wget
-     git
+    vim
+    neovim
+    emacs
+    wget
+    git
 
-     pciutils # lspci
-     inxi
+    pciutils # lspci
+    inxi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -130,5 +127,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

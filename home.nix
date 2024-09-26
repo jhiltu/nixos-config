@@ -1,11 +1,8 @@
-{ config, pkgs, ... }:
-{
-  imports = [
-    ./sh.nix
-  ];
+{ pkgs, ... }: {
+  imports = [ ./sh.nix ./editors.nix ];
 
   home.stateVersion = "24.05"; # Don't touch!
-  
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "sose";
@@ -42,9 +39,7 @@
     # '';
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

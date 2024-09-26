@@ -8,25 +8,25 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: 
+  outputs = { self, nixpkgs, home-manager, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-     in {
- 	nixosConfigurations = {
-      	  enne = lib.nixosSystem {
-            inherit system;
-	    modules = [ 
-	      ./configuration.nix 
-	      home-manager.nixosModules.home-manager
-	      {
-                 home-manager.useGlobalPkgs = true;
-		 home-manager.useUserPackages = true;
-		 home-manager.users.sose = import ./home.nix;
-	      }
-	    ];
-	  };
+    in {
+      nixosConfigurations = {
+        enne = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.sose = import ./home.nix;
+            }
+          ];
         };
-   };
+      };
+    };
 }
