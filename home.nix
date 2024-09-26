@@ -29,6 +29,10 @@
     neovim
     firefox
 
+    # git and github cli
+    git
+    gh
+
     (nerdfonts.override { fonts = [ "Noto" "JetBrainsMono" ]; })
   ];
 
