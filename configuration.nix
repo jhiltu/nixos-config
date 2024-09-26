@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./nvidia.nix
     ./steam.nix
+    ./virtualization.nix
   ];
 
   # Bootloader.
@@ -35,6 +36,9 @@
     LC_TELEPHONE = "fi_FI.UTF-8";
     LC_TIME = "fi_FI.UTF-8";
   };
+
+  # zram swap
+  zramSwap.enable = true;
 
   # zsh
   environment.shells = with pkgs; [

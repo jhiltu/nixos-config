@@ -25,6 +25,8 @@
     git
     gh
 
+    fastfetch
+
     (nerdfonts.override {
       fonts = [
         "Noto"
