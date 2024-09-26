@@ -17,17 +17,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "enne"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/Helsinki";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "fi_FI.UTF-8";
     LC_IDENTIFICATION = "fi_FI.UTF-8";
@@ -76,12 +72,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -116,6 +106,9 @@
 
     pciutils # lspci
     inxi
+
+    ripgrep
+    fd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
