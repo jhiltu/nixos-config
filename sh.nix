@@ -13,6 +13,7 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = myAliases;
+    initExtra = "bindkey -e";
   };
 
   programs.starship.enable = true;
