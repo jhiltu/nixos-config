@@ -19,7 +19,7 @@
     neovim
     firefox
     discord
-
+    spotify
     # git and github cli
     git
     gh
