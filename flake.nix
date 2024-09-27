@@ -30,7 +30,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.sose = import ./home/home.nix;
+              home-manager.users.sose = import ./home/home-enne.nix;
             }
           ];
         };
@@ -43,7 +43,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.sose = import ./home/home.nix;
+              home-manager.users.sose = import ./home/home-kivi.nix;
             }
           ];
         };

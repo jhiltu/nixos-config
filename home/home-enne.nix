@@ -32,6 +32,8 @@
 
     fastfetch
 
+    jetbrains.idea-community-bin
+
     (nerdfonts.override {
       fonts = [
         "Noto"

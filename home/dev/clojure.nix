@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     clojure
+    leiningen
     cljfmt
   ];
 }
