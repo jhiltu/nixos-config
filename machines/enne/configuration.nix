@@ -14,6 +14,10 @@
     ../../system/virtualization.nix
     ../../system/kdeplasma.nix
     ../../system/screenrecording.nix
+
+    # dev
+    ../../system/dev/clojure.nix
+    ../../system/dev/lisp.nix
   ];
 
   networking.hostName = "enne";

@@ -74,18 +74,33 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
-    neovim
-    wget
-    git
-    lazygit
+    # editors
+    vim neovim
 
-    pciutils # lspci
-    inxi
+    # version control etc
+    git lazygit wget curl
 
-    ripgrep
-    fd
-    tree
+    # system utils
+    pciutils inxi
+    ripgrep fd tree
+    fastfetch
+
+    # browsers
+    firefox
+
+    # important desktop applications
+    discord spotify calibre
+
+    # graphics etc
+    pinta
+
+    # fonts
+    (nerdfonts.override {
+      fonts = [
+        "Noto"
+        "JetBrainsMono"
+      ];
+    })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

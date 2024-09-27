@@ -3,8 +3,6 @@
   imports = [
     ./sh.nix
     ./editors.nix
-    ./dev/clojure.nix
-    ./dev/lisp.nix
   ];
 
   home.stateVersion = "24.05"; # Don't touch!
@@ -16,31 +14,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [
-    wget
-    curl
-    neovim
-    firefox
-    discord
-    spotify
-    calibre
-    krita
-    pinta
-    # git and github cli
-    git
-    gh
-
-    fastfetch
-
-    jetbrains.idea-community-bin
-
-    (nerdfonts.override {
-      fonts = [
-        "Noto"
-        "JetBrainsMono"
-      ];
-    })
-  ];
+  #home.packages = with pkgs; [];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
