@@ -23,6 +23,9 @@
     firefox
     discord
     spotify
+    calibre
+    krita
+    pinta
     # git and github cli
     git
     gh

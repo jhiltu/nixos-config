@@ -12,6 +12,7 @@
     ../../system/steam.nix
     ../../system/virtualization.nix
     ../../system/kdeplasma.nix
+    ../../system/screenrecording.nix
   ];
 
   networking.hostName = "enne";
