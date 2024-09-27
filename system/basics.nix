@@ -81,7 +81,7 @@
     nixfmt-rfc-style # formatter
 
     # version control etc
-    git lazygit wget curl
+    git gh lazygit wget curl
 
     # system utils
     pciutils inxi
