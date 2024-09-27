@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../system/basics.nix
+    ../../system/audio.nix
     ../../system/i3.nix
   ];
 
