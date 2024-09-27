@@ -81,6 +81,9 @@
     # version control etc
     git gh lazygit wget curl
 
+    # dev
+    gnumake
+
     # system utils
     pciutils inxi
     ripgrep fd tree
