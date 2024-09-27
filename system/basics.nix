@@ -11,6 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   # Enable networking
   networking.networkmanager.enable = true;
+  systemd.services.NetworkManager-wait-online.enable = false; # slows boot by 5-10s
 
   time.timeZone = "Europe/Helsinki";
 
