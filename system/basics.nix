@@ -84,6 +84,8 @@
     pciutils inxi
     ripgrep fd tree
     fastfetch
+    btop htop
+    nmap
 
     # browsers
     firefox
@@ -101,6 +103,8 @@
         "JetBrainsMono"
       ];
     })
+    noto-fonts noto-fonts-emoji noto-fonts-cjk
+    font-awesome
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
