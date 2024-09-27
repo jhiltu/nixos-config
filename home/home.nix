@@ -3,6 +3,8 @@
   imports = [
     ./sh.nix
     ./editors.nix
+    ./dev/clojure.nix
+    ./dev/lisp.nix
   ];
 
   home.stateVersion = "24.05"; # Don't touch!

@@ -89,6 +89,7 @@
     emacs
     wget
     git
+    lazygit
 
     pciutils # lspci
     inxi
