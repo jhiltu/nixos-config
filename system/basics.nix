@@ -71,11 +71,14 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (_: true);
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # Packages for all environments
   environment.systemPackages = with pkgs; [
     # editors
-    vim neovim
+    vim neovim emacs
+
+    # Nix helpers
+    nil # language server
+    nixfmt-rfc-style # formatter
 
     # version control etc
     git lazygit wget curl
