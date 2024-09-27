@@ -25,7 +25,7 @@
         enne = lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
+            ./machines/enne/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
