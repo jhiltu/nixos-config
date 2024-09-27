@@ -96,16 +96,42 @@
     # graphics etc
     pinta
 
-    # fonts
-    (nerdfonts.override {
-      fonts = [
-        "Noto"
-        "JetBrainsMono"
-      ];
-    })
-    noto-fonts noto-fonts-emoji noto-fonts-cjk
-    font-awesome
   ];
+
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts noto-fonts-emoji noto-fonts-cjk
+      font-awesome
+      fira fira-code
+      libertine
+      source-serif-pro
+      liberation_ttf
+      ubuntu_font_family
+      hack-font
+      unifont
+      corefonts
+      vistafonts
+      roboto
+      (nerdfonts.override {
+        fonts = [
+          "Noto"
+          "JetBrainsMono"
+          "FiraCode"
+          "SourceCodePro"
+        ];
+      })
+    ];
+
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "Liberation Serif" ];
+        sansSerif = [ "Ubuntu" ];
+        monospace = [ "Ubuntu Mono" ];
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
