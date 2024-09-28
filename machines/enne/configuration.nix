@@ -12,7 +12,7 @@
     ../../system/nvidia.nix
     ../../system/kdeplasma.nix
     ../../system/browsers.nix
-    ../../system/steam.nix
+    ../../system/gaming.nix
     ../../system/virtualization.nix
     ../../system/screenrecording.nix
 
@@ -26,6 +26,10 @@
 
   # zen kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  # gaming!
+  mystuff.gaming.steam = true;
+  mystuff.gaming.lutris = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

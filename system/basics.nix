@@ -72,31 +72,51 @@
   # Packages for all environments
   environment.systemPackages = with pkgs; [
     # editors
-    vim neovim emacs
-    xclip wl-clipboard lua luarocks tree-sitter nodejs # for nvim..?
+    vim
+    neovim
+    emacs
+    xclip
+    wl-clipboard
+    lua
+    luarocks
+    tree-sitter
+    nodejs # for nvim..?
 
     # Nix helpers
     nil # language server
     nixfmt-rfc-style # formatter
 
     # version control etc
-    git gh lazygit wget curl
+    git
+    gh
+    lazygit
+    wget
+    curl
 
     # dev
-    gnumake gcc clang
-    unzip busybox
+    gnumake
+    gcc
+    clang
+    unzip
+    busybox
 
     # system utils
-    pciutils inxi
-    ripgrep fd tree
+    pciutils
+    inxi
+    ripgrep
+    fd
+    tree
     fastfetch
-    btop htop
+    btop
+    htop
     nmap
 
     # browsers
 
     # important desktop applications
-    discord spotify calibre
+    discord
+    spotify
+    calibre
 
     # graphics etc
     pinta
@@ -107,9 +127,12 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      noto-fonts noto-fonts-emoji noto-fonts-cjk
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk
       font-awesome
-      fira fira-code
+      fira
+      fira-code
       libertine
       source-serif-pro
       liberation_ttf

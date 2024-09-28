@@ -13,4 +13,8 @@
     open = true;
     nvidiaSettings = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    vulkan-tools
+  ];
 }
