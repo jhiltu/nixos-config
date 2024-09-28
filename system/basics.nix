@@ -73,7 +73,7 @@
   environment.systemPackages = with pkgs; [
     # editors
     vim neovim emacs
-    lua luarocks # for nvim..?
+    xclip wl-clipboard lua luarocks tree-sitter nodejs # for nvim..?
 
     # Nix helpers
     nil # language server
