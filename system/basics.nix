@@ -145,4 +145,6 @@
     enableSSHSupport = true;
   };
 
+  # Polkit (explicitly for i3 etc)
+  security.polkit.enable = true;
 }
