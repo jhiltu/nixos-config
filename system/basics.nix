@@ -83,6 +83,7 @@
 
     # dev
     gnumake gcc clang
+    unzip busybox
 
     # system utils
     pciutils inxi
