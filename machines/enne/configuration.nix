@@ -10,9 +10,10 @@
     ../../system/basics.nix
     ../../system/audio.nix
     ../../system/nvidia.nix
+    ../../system/kdeplasma.nix
+    ../../system/browsers.nix
     ../../system/steam.nix
     ../../system/virtualization.nix
-    ../../system/kdeplasma.nix
     ../../system/screenrecording.nix
 
     # dev

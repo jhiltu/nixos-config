@@ -11,6 +11,7 @@
     ../../system/audio.nix
     ../../system/i3.nix
     ../../system/xfce.nix
+    ../../system/browsers.nix
   ];
 
   networking.hostName = "kivi";

@@ -94,7 +94,6 @@
     nmap
 
     # browsers
-    firefox
 
     # important desktop applications
     discord spotify calibre
