@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.username = "sose";
   home.homeDirectory = "/home/sose";
@@ -8,8 +8,8 @@
   ];
 
   home.file = {
-    ".zshrc".source = ../dotfiles/.zshrc;
-    ".config/nvim".source = ../dotfiles/.config/nvim;
+    ".zshrc".source =  ../dotfiles/.zshrc;
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/dotfiles/.config/nvim";
   };
 
   home.sessionVariables = {

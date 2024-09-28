@@ -82,7 +82,7 @@
     git gh lazygit wget curl
 
     # dev
-    gnumake
+    gnumake gcc clang
 
     # system utils
     pciutils inxi
